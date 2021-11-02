@@ -1,6 +1,6 @@
 package application.model.products;
 
-public class song {
+public class song implements Queueable{
     private String title;
     private String path;
     private String image;
@@ -10,8 +10,20 @@ public class song {
         path = _path;
         image = _image;
     }
+
     @Override
     public song clone() {
         return new song(title, path, image);
     }
+
+    @Override
+    public void play() {
+
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
 }
